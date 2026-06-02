@@ -1,0 +1,98 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  background: linear-gradient(to bottom, var(--bark) 0%, transparent 100%);
+  mix-blend-mode: normal;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream);
+  transition: color var(--transition);
+}
+
+.logo:hover { color: var(--honey); }
+
+.logoMark {
+  color: var(--amber);
+  font-size: 0.9rem;
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.link {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fog);
+  position: relative;
+  padding-bottom: 2px;
+  transition: color var(--transition);
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--amber);
+  transition: width var(--transition);
+}
+
+.link:hover,
+.active {
+  color: var(--cream);
+}
+
+.link:hover::after,
+.active::after {
+  width: 100%;
+}
+
+.cta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bark);
+  background: var(--amber);
+  padding: 0.55rem 1.4rem;
+  border-radius: 1px;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.cta:hover {
+  background: var(--honey);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 1.25rem 1.5rem; }
+  .links { display: none; }
+}
