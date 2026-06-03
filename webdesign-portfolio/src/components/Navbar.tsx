@@ -3,40 +3,53 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/work", label: "Work" },
-  { href: "/services", label: "Services" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
-
 export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className={styles.nav}>
-      <Link href="/" className={styles.logo}>
-        <span className={styles.logoMark}>✦</span>
-        <span className={styles.logoText}>Studio</span>
-      </Link>
+    <header className={styles.header}>
 
-      <ul className={styles.links}>
-        {links.map(({ href, label }) => (
-          <li key={href}>
-            <Link
-              href={href}
-              className={`${styles.link} ${pathname === href ? styles.active : ""}`}
-            >
-              {label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {/* Left vertical rail */}
+      <div className={styles.railLeft}>
+        <span className={styles.railText}>Scale Studio® — Boutique Web Design</span>
+      </div>
 
-      <Link href="/contact" className={styles.cta}>
-        Let&apos;s Talk
-      </Link>
-    </nav>
+      {/* Main nav bar */}
+      <nav className={styles.nav} aria-label="Main navigation">
+        <div className={styles.navLeft}>
+          <Link href="/work" className={`${styles.link} ${pathname === "/work" ? styles.active : ""}`}>
+            Work
+          </Link>
+          <Link href="/services" className={`${styles.link} ${pathname === "/services" ? styles.active : ""}`}>
+            Services
+          </Link>
+          <Link href="/about" className={`${styles.link} ${pathname === "/about" ? styles.active : ""}`}>
+            About
+          </Link>
+        </div>
+
+        <Link href="/" className={styles.logo} aria-label="Scale Studio home">
+          Scale Studio®
+        </Link>
+
+        <div className={styles.navRight}>
+          <span className={styles.status}>
+            <span className={styles.dot} aria-hidden="true" />
+            Open for Projects
+          </span>
+          <Link href="/contact" className={`${styles.link} ${pathname === "/contact" ? styles.active : ""}`}>
+            Contact
+          </Link>
+        </div>
+      </nav>
+
+      {/* Right vertical rail */}
+      <div className={styles.railRight}>
+        <Link href="/contact" className={styles.railLink}>
+          General Inquiry
+        </Link>
+      </div>
+
+    </header>
   );
 }
