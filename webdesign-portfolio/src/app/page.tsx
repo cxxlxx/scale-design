@@ -29,6 +29,30 @@ const services = [
   },
 ];
 
+const works = [
+  {
+    num: "01",
+    title: "Maison Noire",
+    category: "Brand & Web",
+    year: "2024",
+    tags: "Identity — Web Design — Development",
+  },
+  {
+    num: "02",
+    title: "Veld Studio",
+    category: "UI Design",
+    year: "2024",
+    tags: "Interface — Motion — Prototyping",
+  },
+  {
+    num: "03",
+    title: "Opaline Co.",
+    category: "E-Commerce",
+    year: "2023",
+    tags: "Shopify — Art Direction — UX",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -123,7 +147,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Bottom strip */}
           <div className={styles.servicesFooter}>
             <p className={styles.servicesNote}>
               Every project is taken on personally — no outsourcing, no junior handoffs.
@@ -133,9 +156,52 @@ export default function Home() {
 
         </section>
 
-        {/* ── PLACEHOLDER for Work + Footer ── */}
+        {/* ── WORK ── */}
+        <section className={styles.work} aria-label="Selected work">
+
+          <div className={styles.workHeader}>
+            <span className={styles.sectionIndex}>—</span>
+            <span className={styles.sectionLabel}>Selected Work</span>
+            <h2 className={styles.sectionTitle}>Projects</h2>
+            <a href="/work" className={styles.workViewAll}>View All →</a>
+          </div>
+
+          <div className={styles.workList}>
+            {works.map(({ num, title, category, year, tags }) => (
+              <a href="/work" key={num} className={styles.workRow}>
+                <span className={styles.workNum}>{num}</span>
+
+                <div className={styles.workImageThumb}>
+                  <div className={styles.workImageInner} />
+                </div>
+
+                <div className={styles.workBody}>
+                  <h3 className={styles.workTitle}>{title}</h3>
+                  <p className={styles.workCategory}>{category}</p>
+                </div>
+
+                <p className={styles.workTags}>{tags}</p>
+
+                <div className={styles.workMeta}>
+                  <span className={styles.workYear}>{year}</span>
+                  <span className={styles.workArrow}>↗</span>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div className={styles.workFooter}>
+            <p className={styles.workNote}>
+              Portfolio expanding as new projects are completed.
+            </p>
+            <a href="/work" className={styles.heroCta}>See All Work →</a>
+          </div>
+
+        </section>
+
+        {/* ── PLACEHOLDER for Footer ── */}
         <div className={styles.comingSoon}>
-          <p>Work &amp; Footer coming in the next steps →</p>
+          <p>Footer coming in the next step →</p>
         </div>
 
       </main>
