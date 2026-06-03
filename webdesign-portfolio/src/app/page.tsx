@@ -2,6 +2,33 @@ import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import styles from "./page.module.css";
 
+const services = [
+  {
+    num: "01",
+    title: "Brand Identity",
+    desc: "Visual systems built with precision and intention. Logos, typography, colour, and motion that speak before a word is read.",
+    detail: "Strategy — Visual Identity — Guidelines",
+  },
+  {
+    num: "02",
+    title: "Web Design",
+    desc: "Bespoke interfaces designed to captivate and convert. Every layout considered. No templates. Ever.",
+    detail: "UX — Art Direction — Responsive Design",
+  },
+  {
+    num: "03",
+    title: "Development",
+    desc: "Clean, performant, hand-written code. Built on the modern web stack and deployed for speed.",
+    detail: "Next.js — TypeScript — Vercel",
+  },
+  {
+    num: "04",
+    title: "UI / UX",
+    desc: "Frictionless flows and considered interactions. Designed to keep visitors engaged and returning.",
+    detail: "Wireframes — Prototypes — User Testing",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -9,10 +36,10 @@ export default function Home() {
       <Navbar />
 
       <main>
+
         {/* ── HERO ── */}
         <section className={styles.hero} aria-label="Hero">
 
-          {/* Left status column */}
           <div className={styles.heroStatus}>
             <div className={styles.statusBlock}>
               <p className={styles.statusLabel}>Status</p>
@@ -28,15 +55,11 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Centre — big type + image */}
           <div className={styles.heroCentre}>
-
-            {/* Top line of display type — sits above the image */}
             <div className={styles.typeWrap} aria-hidden="true">
               <span className={styles.typeTop}>Scale</span>
             </div>
 
-            {/* Hero image placeholder — sandwiched between type lines */}
             <div className={styles.imagePlaceholder}>
               <div className={styles.imagePlaceholderInner}>
                 <span className={styles.imagePlaceholderLabel}>
@@ -46,12 +69,10 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Bottom line of display type — overlaps image bottom */}
             <div className={styles.typeWrapBottom} aria-hidden="true">
               <span className={styles.typeBottom}>Studio</span>
             </div>
 
-            {/* Tagline sits below the type */}
             <div className={styles.taglineRow}>
               <p className={styles.tagline}>
                 A boutique web design studio in Australia
@@ -60,51 +81,61 @@ export default function Home() {
                 View Work →
               </a>
             </div>
-
           </div>
 
-          {/* Right column — circular badge */}
           <div className={styles.heroRight}>
             <div className={styles.badgeWrap} aria-label="Scale Studio — Boutique Web Design Australia">
-              <svg
-                className={styles.badge}
-                viewBox="0 0 200 200"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path
-                  id="circlePath"
-                  d="M 100,100 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
-                  fill="none"
-                />
+              <svg className={styles.badge} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path id="circlePath" d="M 100,100 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0" fill="none" />
                 <text className={styles.badgeText}>
                   <textPath href="#circlePath" startOffset="0%">
                     Scale Studio® — Boutique Web Design — Australia —&nbsp;
                   </textPath>
                 </text>
-                <text
-                  x="100"
-                  y="95"
-                  textAnchor="middle"
-                  className={styles.badgeCentre}
-                >SS
-                </text>
-                <text
-                  x="100"
-                  y="115"
-                  textAnchor="middle"
-                  className={styles.badgeCentreSmall}
-                >®
-                </text>
+                <text x="100" y="95" textAnchor="middle" className={styles.badgeCentre}>SS</text>
+                <text x="100" y="115" textAnchor="middle" className={styles.badgeCentreSmall}>®</text>
               </svg>
             </div>
           </div>
 
         </section>
 
-        {/* ── PLACEHOLDER for sections coming in later steps ── */}
+        {/* ── SERVICES ── */}
+        <section className={styles.services} aria-label="Services">
+
+          <div className={styles.servicesHeader}>
+            <span className={styles.sectionIndex}>—</span>
+            <span className={styles.sectionLabel}>Services</span>
+            <h2 className={styles.sectionTitle}>What We Do</h2>
+          </div>
+
+          <div className={styles.serviceList}>
+            {services.map(({ num, title, desc, detail }) => (
+              <article key={num} className={styles.serviceRow}>
+                <span className={styles.serviceNum}>{num}</span>
+                <div className={styles.serviceBody}>
+                  <h3 className={styles.serviceName}>{title}</h3>
+                  <p className={styles.serviceDesc}>{desc}</p>
+                </div>
+                <p className={styles.serviceDetail}>{detail}</p>
+                <span className={styles.serviceArrow}>↗</span>
+              </article>
+            ))}
+          </div>
+
+          {/* Bottom strip */}
+          <div className={styles.servicesFooter}>
+            <p className={styles.servicesNote}>
+              Every project is taken on personally — no outsourcing, no junior handoffs.
+            </p>
+            <a href="/contact" className={styles.heroCta}>Start a Project →</a>
+          </div>
+
+        </section>
+
+        {/* ── PLACEHOLDER for Work + Footer ── */}
         <div className={styles.comingSoon}>
-          <p>Services, Work &amp; Footer coming in the next steps →</p>
+          <p>Work &amp; Footer coming in the next steps →</p>
         </div>
 
       </main>
