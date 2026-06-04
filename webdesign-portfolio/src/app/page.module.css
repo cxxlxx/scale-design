@@ -6,21 +6,20 @@
   display: grid;
   grid-template-columns: 220px 1fr 220px;
   min-height: 100svh;
-  padding-top: 3.2rem; /* clears the fixed navbar */
+  padding-top: 2.8rem; /* matches compact navbar height exactly */
   border-bottom: 1px solid var(--sand-deep);
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 
 /* ─── Left status column ─── */
 .heroStatus {
-  padding: 3rem 1.8rem;
+  padding: 2.5rem 1.8rem;
   border-right: 1px solid var(--sand-deep);
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2rem;
   justify-content: flex-start;
-  padding-top: 4rem;
 }
 
 .statusBlock {
@@ -56,7 +55,7 @@
 
 /* ─── Display type ─── */
 .typeWrap {
-  padding: 2rem 0 0 1.5rem;
+  padding: 1.5rem 0 0 1.5rem;
   position: relative;
   z-index: 3;
   line-height: 1;
@@ -66,14 +65,14 @@
   position: relative;
   z-index: 3;
   padding: 0 0 0 1.5rem;
-  margin-top: -0.12em; /* pulls up to overlap image bottom edge */
+  margin-top: -0.08em;
   line-height: 1;
 }
 
 .typeTop,
 .typeBottom {
   font-family: var(--font-display);
-  font-size: clamp(7rem, 16vw, 14rem);
+  font-size: clamp(5.5rem, 13vw, 11rem);
   font-weight: 600;
   letter-spacing: -0.04em;
   color: var(--ox);
