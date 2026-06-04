@@ -170,18 +170,14 @@ export default function Home() {
             {works.map(({ num, title, category, year, tags }) => (
               <a href="/work" key={num} className={styles.workRow}>
                 <span className={styles.workNum}>{num}</span>
-
                 <div className={styles.workImageThumb}>
                   <div className={styles.workImageInner} />
                 </div>
-
                 <div className={styles.workBody}>
                   <h3 className={styles.workTitle}>{title}</h3>
                   <p className={styles.workCategory}>{category}</p>
                 </div>
-
                 <p className={styles.workTags}>{tags}</p>
-
                 <div className={styles.workMeta}>
                   <span className={styles.workYear}>{year}</span>
                   <span className={styles.workArrow}>↗</span>
@@ -199,12 +195,90 @@ export default function Home() {
 
         </section>
 
-        {/* ── PLACEHOLDER for Footer ── */}
-        <div className={styles.comingSoon}>
-          <p>Footer coming in the next step →</p>
-        </div>
+        {/* ── CTA BAND ── */}
+        <section className={styles.ctaBand} aria-label="Start a project">
+          <div className={styles.ctaBandInner}>
+            <h2 className={styles.ctaBandTitle}>
+              Got a project<br />in mind?
+            </h2>
+            <div className={styles.ctaBandRight}>
+              <p className={styles.ctaBandSub}>
+                We work with a small number of clients at a time — so when we take on your project, you get our full attention.
+              </p>
+              <a href="/contact" className={styles.ctaBandBtn}>
+                Start a Conversation →
+              </a>
+            </div>
+          </div>
+        </section>
 
       </main>
+
+      {/* ── FOOTER ── */}
+      <footer className={styles.footer}>
+
+        {/* Top strip — logo + tagline */}
+        <div className={styles.footerTop}>
+          <span className={styles.footerLogo}>Scale Studio®</span>
+          <span className={styles.footerTagline}>
+            A boutique web design studio in Australia
+          </span>
+        </div>
+
+        {/* Main footer grid */}
+        <div className={styles.footerGrid}>
+
+          <div className={styles.footerCol}>
+            <p className={styles.footerColLabel}>Studio</p>
+            <nav className={styles.footerNav}>
+              <a href="/work"     className={styles.footerLink}>Work</a>
+              <a href="/services" className={styles.footerLink}>Services</a>
+              <a href="/about"    className={styles.footerLink}>About</a>
+              <a href="/contact"  className={styles.footerLink}>Contact</a>
+            </nav>
+          </div>
+
+          <div className={styles.footerCol}>
+            <p className={styles.footerColLabel}>Services</p>
+            <nav className={styles.footerNav}>
+              <a href="/services" className={styles.footerLink}>Brand Identity</a>
+              <a href="/services" className={styles.footerLink}>Web Design</a>
+              <a href="/services" className={styles.footerLink}>Development</a>
+              <a href="/services" className={styles.footerLink}>UI / UX</a>
+            </nav>
+          </div>
+
+          <div className={styles.footerCol}>
+            <p className={styles.footerColLabel}>Contact</p>
+            <nav className={styles.footerNav}>
+              <a href="mailto:hello@scalestudio.com.au" className={styles.footerLink}>
+                hello@scalestudio.com.au
+              </a>
+              <a href="/contact" className={styles.footerLink}>General Inquiry</a>
+            </nav>
+          </div>
+
+          <div className={styles.footerCol}>
+            <p className={styles.footerColLabel}>Follow</p>
+            <nav className={styles.footerNav}>
+              <a href="#" className={styles.footerLink}>Instagram</a>
+              <a href="#" className={styles.footerLink}>LinkedIn</a>
+            </nav>
+          </div>
+
+        </div>
+
+        {/* Bottom strip — copyright */}
+        <div className={styles.footerBottom}>
+          <span className={styles.footerCopy}>
+            © {new Date().getFullYear()} Scale Studio®. All rights reserved.
+          </span>
+          <span className={styles.footerCopy}>
+            Brisbane, Australia
+          </span>
+        </div>
+
+      </footer>
     </>
   );
 }
