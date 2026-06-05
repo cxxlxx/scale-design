@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Scale Studio® — Boutique Web Design, Australia",
+  title: "Scale Designs® — Boutique Web Design, Australia",
   description: "A boutique web design studio in Australia. Bespoke digital experiences for brands that refuse the ordinary.",
 };
 
