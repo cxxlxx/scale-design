@@ -6,7 +6,9 @@
   display: grid;
   grid-template-columns: 220px 1fr 220px;
   min-height: 100svh;
-  padding-top: 2.8rem; /* matches compact navbar height exactly */
+  padding-top: 2.8rem;
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
   border-bottom: 1px solid var(--sand-deep);
   overflow: visible;
   position: relative;
@@ -55,7 +57,7 @@
 
 /* ─── Display type ─── */
 .typeWrap {
-  padding: 1.5rem 0 0 1.5rem;
+  padding: 2.5rem 0 2.5rem 1.5rem;
   position: relative;
   z-index: 3;
   line-height: 1;
@@ -64,8 +66,7 @@
 .typeWrapBottom {
   position: relative;
   z-index: 3;
-  padding: 0 0 0 1.5rem;
-  margin-top: -0.08em;
+  padding: 2.5rem 0 2.5rem 1.5rem;
   line-height: 1;
 }
 
@@ -270,6 +271,8 @@
 
 .services {
   border-bottom: 1px solid var(--sand-deep);
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
 }
 
 /* ─── Header strip ─── */
@@ -433,6 +436,8 @@
 
 .work {
   border-bottom: 1px solid var(--sand-deep);
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
 }
 
 /* ─── Header strip ─── */
@@ -639,6 +644,8 @@
 .ctaBand {
   background: var(--ink);
   border-bottom: 1px solid #2a2018;
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
 }
 
 .ctaBandInner {
@@ -705,6 +712,8 @@
 .footer {
   background: var(--ink);
   border-top: 1px solid #2a2018;
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
 }
 
 /* ─── Top strip ─── */
