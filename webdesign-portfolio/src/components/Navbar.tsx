@@ -10,7 +10,7 @@ export default function Navbar() {
     <>
       {/* Full-height left rail — fixed to page edge */}
       <div className={styles.railLeft} aria-hidden="true">
-        <span className={styles.railText}>Scale Studio® — Boutique Web Design — Australia —</span>
+        <span className={styles.railText}>Scale Designs® — Boutique Web Design — Australia —</span>
       </div>
 
       {/* Full-height right rail — fixed to page edge */}
@@ -30,8 +30,8 @@ export default function Navbar() {
             <Link href="/about"    className={`${styles.link} ${pathname === "/about"    ? styles.active : ""}`}>About</Link>
           </div>
 
-          <Link href="/" className={styles.logo} aria-label="Scale Studio home">
-            Scale Studio®
+          <Link href="/" className={styles.logo} aria-label="Scale Designs home">
+            Scale Designs®
           </Link>
 
           <div className={styles.navRight}>
