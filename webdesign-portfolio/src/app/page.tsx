@@ -84,10 +84,6 @@ export default function Home() {
               <span className={styles.typeTop}>Scale</span>
             </div>
 
-            <div className={styles.typeWrapRight} aria-hidden="true">
-              <span className={styles.typeRight}>Studios</span>
-            </div>
-
             <div className={styles.imagePlaceholder}>
               <div className={styles.imagePlaceholderInner}>
                 <span className={styles.imagePlaceholderLabel}>
@@ -98,7 +94,7 @@ export default function Home() {
             </div>
 
             <div className={styles.typeWrapBottom} aria-hidden="true">
-              <span className={styles.typeBottomRule} />
+              <span className={styles.typeBottom}>Designs</span>
             </div>
 
             <div className={styles.taglineRow}>
