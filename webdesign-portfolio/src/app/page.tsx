@@ -108,12 +108,12 @@ export default function Home() {
           </div>
 
           <div className={styles.heroRight}>
-            <div className={styles.badgeWrap} aria-label="Scale Studio — Boutique Web Design Australia">
+            <div className={styles.badgeWrap} aria-label="Scale Designs — Boutique Web Design Australia">
               <svg className={styles.badge} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path id="circlePath" d="M 100,100 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0" fill="none" />
                 <text className={styles.badgeText}>
                   <textPath href="#circlePath" startOffset="0%">
-                    Scale Studio® — Boutique Web Design — Australia —&nbsp;
+                    Scale Designs® — Boutique Web Design — Australia —&nbsp;
                   </textPath>
                 </text>
                 <text x="100" y="95" textAnchor="middle" className={styles.badgeCentre}>SS</text>
@@ -219,7 +219,7 @@ export default function Home() {
 
         {/* Top strip — logo + tagline */}
         <div className={styles.footerTop}>
-          <span className={styles.footerLogo}>Scale Studio®</span>
+          <span className={styles.footerLogo}>Scale Designs®</span>
           <span className={styles.footerTagline}>
             A boutique web design studio in Australia
           </span>
@@ -271,7 +271,7 @@ export default function Home() {
         {/* Bottom strip — copyright */}
         <div className={styles.footerBottom}>
           <span className={styles.footerCopy}>
-            © {new Date().getFullYear()} Scale Studio®. All rights reserved.
+            © {new Date().getFullYear()} Scale Designs®. All rights reserved.
           </span>
           <span className={styles.footerCopy}>
             Brisbane, Australia
