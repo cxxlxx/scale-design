@@ -85,7 +85,7 @@ export default function Home() {
             </div>
 
             <div className={styles.typeWrapRight} aria-hidden="true">
-              <span className={styles.typeRight}>Designs</span>
+              <span className={styles.typeRight}>Studios</span>
             </div>
 
             <div className={styles.imagePlaceholder}>
