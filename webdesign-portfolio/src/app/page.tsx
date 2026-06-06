@@ -85,12 +85,12 @@ export default function Home() {
             </div>
 
             <div className={styles.imagePlaceholder}>
-  <img
-    src="/hero.jpg"
-    alt="Scale Designs hero"
-    className={styles.heroImg}
-  />
-</div>
+              <img
+                src="/hero.jpg"
+                alt="Scale Designs"
+                className={styles.heroImg}
+              />
+            </div>
 
             <div className={styles.typeWrapBottom} aria-hidden="true">
               <span className={styles.typeBottom}>Designs</span>
