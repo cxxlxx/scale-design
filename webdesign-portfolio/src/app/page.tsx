@@ -67,7 +67,7 @@ export default function Home() {
           <div className={styles.heroStatus}>
             <div className={styles.statusBlock}>
               <p className={styles.statusLabel}>Status</p>
-              <p className={styles.statusValue}>Open Until<br />Further Notice</p>
+              <p className={styles.statusValue}>Open For<br />Projects</p>
             </div>
             <div className={styles.statusBlock}>
               <p className={styles.statusLabel}>Hours</p>
