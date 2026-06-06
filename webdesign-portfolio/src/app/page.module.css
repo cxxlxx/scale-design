@@ -202,8 +202,8 @@
 
 .badgeText {
   font-family: var(--font-ui);
-  font-size: 12.5px;
-  letter-spacing: 0.16em;
+  font-size: 10.5px;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
   fill: var(--ox);
 }
