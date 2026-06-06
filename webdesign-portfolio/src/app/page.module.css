@@ -97,17 +97,15 @@
   color: var(--ink);
 }
 
-/* ─── Hero image placeholder ─── */
+/* ─── Hero image ─── */
 .imagePlaceholder {
   position: relative;
   z-index: 2;
   flex: 1;
   min-height: 320px;
-  background: var(--sand-mid);
+  overflow: hidden;
   border-top: 1px solid var(--sand-deep);
   border-bottom: 1px solid var(--sand-deep);
-  overflow: hidden;
-  margin: 0;
 }
 
 .heroImg {
@@ -116,32 +114,6 @@
   object-fit: cover;
   object-position: center;
   display: block;
-}
-
-.imagePlaceholderInner {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.imagePlaceholderLabel {
-  font-family: var(--font-ui);
-  font-size: 0.65rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  text-align: center;
-  line-height: 2;
-  pointer-events: none;
-  user-select: none;
-}
-
-.imagePlaceholderLabel span {
-  color: var(--ox);
-  display: block;
-  font-size: 0.6rem;
 }
 
 /* ─── Tagline row ─── */
