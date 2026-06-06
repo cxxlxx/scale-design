@@ -94,7 +94,7 @@ export default function Home() {
             </div>
 
             <div className={styles.typeWrapBottom} aria-hidden="true">
-              <span className={styles.typeBottom}>Designs®</span>
+              <span className={styles.typeBottom}>Designs</span>
             </div>
 
             <div className={styles.taglineRow}>
