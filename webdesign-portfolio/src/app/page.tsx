@@ -113,7 +113,7 @@ export default function Home() {
                 <path id="circlePath" d="M 100,100 m -62,0 a 62,62 0 1,1 124,0 a 62,62 0 1,1 -124,0" fill="none" />
                 <text className={styles.badgeText}>
                   <textPath href="#circlePath" startOffset="0%">
-                    · Scale Designs® · Boutique Web Design · Australia
+                    · Scale Designs · Boutique Web Design · Australia
                   </textPath>
                 </text>
                 <text x="100" y="95" textAnchor="middle" className={styles.badgeCentre}>SD</text>
