@@ -116,7 +116,7 @@ export default function Home() {
                     Scale Designs® — Boutique Web Design — Australia —&nbsp;
                   </textPath>
                 </text>
-                <text x="100" y="95" textAnchor="middle" className={styles.badgeCentre}>SS</text>
+                <text x="100" y="95" textAnchor="middle" className={styles.badgeCentre}>SD</text>
                 <text x="100" y="115" textAnchor="middle" className={styles.badgeCentreSmall}>®</text>
               </svg>
             </div>
